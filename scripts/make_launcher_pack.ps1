@@ -1,7 +1,8 @@
 ﻿# Builds the Tirgumim launcher pack for Undertale Hebrew (free accounts only: requiresAccount false).
 # The pack holds NO game file. It holds a BSDIFF40 patch from the original Steam v1.08 data.win to the Hebrew build,
-# plus the font licence. The launcher (0.3.0+) checks the player's data.win hash, applies the patch, checks the
-# result and keeps a backup of the original.
+# plus the font licence. The launcher (0.4.0+) checks the player's data.win hash and writes the Hebrew game to a NEW
+# file, data_he.win, next to it (data.win is never changed). Hebrew runs only when the launcher starts the game
+# ("activation": Steam -applaunch with -game data_he.win); started from Steam, UNDERTALE stays English.
 #   powershell -ExecutionPolicy Bypass -File scripts\make_launcher_pack.ps1 -Version 0.1.0              # build + pack
 #   powershell -ExecutionPolicy Bypass -File scripts\make_launcher_pack.ps1 -Version 0.1.0 -SkipBuild   # pack an existing build
 # Options: -GameDir "<Undertale folder>" (passed to setup.ps1), -Original/-Hebrew (other input files).
@@ -69,12 +70,13 @@ $manifest = [ordered]@{
     title                   = "תרגום עברי ל-UNDERTALE"
     authors                 = @("Tirgumim")
     engine                  = "gamemaker"
-    minLauncherVersion      = "0.3.0"
+    minLauncherVersion      = "0.4.0"
     requiresAccount         = $false
     gameVersions            = @([ordered]@{ name = "1.08 (Steam)"; checks = @([ordered]@{ path = "data.win"; sha256 = $from }) })
     allowUnknownGameVersion = $false
     files                   = $files
-    patches                 = @([ordered]@{ path = "data.win"; fromSha256 = $from; toSha256 = $to; size = (Get-Item $Hebrew).Length; patch = $PatchRel })
+    patches                 = @([ordered]@{ path = "data.win"; output = "data_he.win"; fromSha256 = $from; toSha256 = $to; size = (Get-Item $Hebrew).Length; patch = $PatchRel })
+    activation              = [ordered]@{ mode = "args"; exe = "UNDERTALE.exe"; args = @("-game", "{gameDir}/data_he.win"); workingDir = "{gameDir}"; via = "steam" }
 }
 $utf8 = New-Object Text.UTF8Encoding $false
 [IO.File]::WriteAllText((Join-Path $Stage "tirgumim-pack.json"), ($manifest | ConvertTo-Json -Depth 8), $utf8)

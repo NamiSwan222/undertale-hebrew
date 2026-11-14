@@ -22,7 +22,13 @@ powershell -ExecutionPolicy Bypass -File setup.ps1
 
 אם המשחק מותקן במקום אחר, הוסיפו `-GameDir "<התיקייה של המשחק>"`.
 
-חזרה לאנגלית:
+הקובץ `data.win` של המשחק לא משתנה. העברית נשמרת בקובץ נפרד, `data_he.win`, ולכן הפעלה רגילה מ-Steam נשארת באנגלית. כדי לשחק בעברית:
+
+```
+powershell -ExecutionPolicy Bypass -File install.ps1 -Play
+```
+
+הסרת העברית:
 
 ```
 powershell -ExecutionPolicy Bypass -File install.ps1 -Restore
@@ -38,9 +44,9 @@ A complete fan translation of UNDERTALE into Hebrew. It covers all of the game's
 - backs up the original `data.win`;
 - decompiles it with UndertaleModTool CLI 0.9.2.0, which it downloads from the official release;
 - applies the Hebrew text, fonts, right-to-left rendering and image redraws;
-- installs the result.
+- installs the result as a separate file, `data_he.win`, next to the untouched `data.win`.
 
-To go back to English, run `install.ps1 -Restore`.
+Starting UNDERTALE from Steam stays English. Start Hebrew with `install.ps1 -Play`. Remove it with `install.ps1 -Restore`, which also undoes a v0.1.0 install that had replaced `data.win`.
 
 ## What's in the repo
 
@@ -56,7 +62,7 @@ Check the translation (after a setup run, which creates the English table): `pyt
 
 ### Launcher pack
 
-`scripts/make_launcher_pack.ps1 -Version X.Y.Z` builds the Tirgumim launcher pack `build\undertale-he-X.Y.Z.zip`. The pack contains no game file. It holds a binary patch (bsdiff) from the original v1.08 `data.win` to the Hebrew build, plus the font licence. The launcher (0.3.0 or later) checks the player's `data.win` hash, applies the patch, checks the result and keeps a backup of the original. The pack is for free launcher accounts only (`requiresAccount: false`).
+`scripts/make_launcher_pack.ps1 -Version X.Y.Z` builds the Tirgumim launcher pack `build\undertale-he-X.Y.Z.zip`. The pack contains no game file. It holds a binary patch (bsdiff) from the original v1.08 `data.win` to the Hebrew build, plus the font licence. The launcher (0.4.0 or later) checks the player's `data.win` hash and writes the Hebrew game to a new file, `data_he.win`; `data.win` itself is never changed. Hebrew runs only when the launcher starts the game (through Steam, with `-game data_he.win`). Started from Steam, UNDERTALE stays English. The pack is for free launcher accounts only (`requiresAccount: false`).
 
 The script runs `setup.ps1 -NoInstall` (use `-SkipBuild` to reuse an existing build). It then makes the patch with `scripts/bsdiff`, a small Rust tool built on the same `qbsdiff` crate the launcher uses, and checks that the patch reproduces the Hebrew file. Last, it writes `tirgumim-pack.json` with the `patches` entry and zips the pack. It needs Rust (`cargo`) in addition to what `setup.ps1` needs. The draft catalog entry is in `pack/catalog-entry.json`.
 
