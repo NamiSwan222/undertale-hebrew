@@ -45,7 +45,8 @@ Write-Output "Game folder: $GameDir"
 Step "Checking Python"
 $py = (Get-Command python -ErrorAction SilentlyContinue)
 if (-not $py) { throw "Python 3 is not on PATH. Install it from python.org (tick 'Add python.exe to PATH') and run again." }
-& python -c "import PIL" 2>$null
+# exit code only: with "Stop", PowerShell 5.1 turns redirected stderr of a native command into a fatal error
+& cmd /c "python -c ""import PIL"" >nul 2>&1"
 if ($LASTEXITCODE -ne 0) { Write-Output "Installing Pillow..."; & python -m pip install --user pillow; if ($LASTEXITCODE -ne 0) { throw "pip install pillow failed" } }
 $env:PYTHONIOENCODING = "utf-8"; $env:PYTHONWARNINGS = "ignore"
 
