@@ -54,6 +54,10 @@ To go back to English, run `install.ps1 -Restore`.
 
 Check the translation (after a setup run, which creates the English table): `python scripts/check_batch.py --all`
 
+### Launcher pack
+
+`scripts/make_launcher_pack.ps1 -Version X.Y.Z` builds the Tirgumim launcher pack `build\undertale-he-X.Y.Z.zip`. The pack contains no game file. It holds a binary patch (bsdiff) from the original v1.08 `data.win` to the Hebrew build, plus the font licence. The launcher checks the player's `data.win` hash, backs the file up and applies the patch. The script needs a launcher version whose `make-pack` supports `patches`.
+
 ## Credits
 
 - The Hebrew font is "אנדרטייל" (Undertale Hebrew) by EpicCreepuh, from [FontStruct](https://fontstruct.com/fontstructions/show/2752684/ndrtyyl-undertale-hebrew). It is under the SIL Open Font License; see `fonts/src_fontstruct/license.txt`.
