@@ -1,0 +1,44 @@
+wait 60
+until room_introimage z
+wait 40
+shot t11_01_title
+wait 60
+until room_introimage z
+wait 60
+press z
+wait 60
+press z
+wait 30
+press z
+wait 10
+press up
+wait 10
+press right
+wait 5
+press right
+wait 10
+press z
+wait 60
+press right
+wait 10
+press z
+wait 400
+room room_tundra_town
+wait 90
+shot t11_02_town
+room room_tundra_town2
+wait 90
+shot t11_03_town2
+room room_tundra_grillby
+wait 90
+shot t11_04_grillby
+room room_tundra_library
+wait 90
+shot t11_05_library
+room room_fire_prelab
+wait 90
+shot t11_06_prelab
+room room_water_temvillage
+wait 90
+shot t11_07_temvillage
+quit

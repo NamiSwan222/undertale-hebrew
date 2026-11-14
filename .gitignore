@@ -1,0 +1,31 @@
+# Whitelist: only the patch sources are published. No game files, nothing extracted from the game,
+# no original English text. Everything else in this folder stays local.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/setup.ps1
+!/install.ps1
+!/scripts/
+!/fonts/
+!/translation/
+!/screenshots/
+
+/fonts/*
+!/fonts/otf_bitmaps.json
+!/fonts/src_fontstruct/
+/fonts/src_fontstruct/*.zip
+
+/translation/*
+!/translation/he/
+!/translation/glossary.md
+!/translation/VOICE_GUIDE.md
+!/translation/TRANSLATOR_BRIEF.md
+!/translation/SPRITE_BRIEF.md
+!/translation/he_code_literals_hashed.json
+
+/screenshots/*
+!/screenshots/final/
+
+__pycache__/
+*.pyc

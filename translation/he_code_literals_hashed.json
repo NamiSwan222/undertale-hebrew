@@ -1,0 +1,147 @@
+[
+ {
+  "code": "gml_Object_obj_waterboardpuzzle1_Step_0",
+  "en_sha1": "73ec88b063f05801a235215e062c5de442165b38",
+  "he": "* (אתה שומע קול קטן.)/"
+ },
+ {
+  "code": "gml_Object_obj_waterboardpuzzle1_Step_0",
+  "en_sha1": "bbda461579c737579b8eadcaa7844afa20999d97",
+  "he": "* כל הכבוד!/"
+ },
+ {
+  "code": "gml_Object_obj_waterboardpuzzle1_Step_0",
+  "en_sha1": "7bf9f995df6f1522785b52bff5b70b6f72bafbfb",
+  "he": "* מה הבעיה שלך!/%%"
+ },
+ {
+  "code": "gml_Object_obj_quicheguilt_Step_0",
+  "en_sha1": "5e7f40d67d633b922d90b6f1e73999a1fad20627",
+  "he": "* איפשהו^1, הפחד הגדול ביותר&  של קיש הופך למציאות./%%"
+ },
+ {
+  "code": "gml_Object_obj_quicheguilt_Step_0",
+  "en_sha1": "71d0930ab19102d380c0a8ba8d8913e2790e9bff",
+  "he": "* קיש בציר זמן אחר./%%"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "4e9500fe1f21fd86c5899a055ce5df1645021672",
+  "he": "לא ממש יצירתי...?"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "9c74465ae1259a9da2cc515a98df1a852cd17e37",
+  "he": "אתה לא יכול."
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "c6e2dd29b75dc0eeb5fa6c2d1fbe100e6ec85f72",
+  "he": "כדאי שתחשוב#על שם משלך,#ילדי."
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "63ef959cf6669a5a3391f438f83b000f6b099930",
+  "he": "לא."
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "6c5eccb73ba35b61321328382970e5a586e8be48",
+  "he": "תמצא שם משלך!"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "fbb222732dab05c154c2cf86abe65f0229a494b1",
+  "he": "כבר בחרתי#בשם הזה."
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "489b85fba78f2fe03936438e826c07bbdf63dba1",
+  "he": "השם האמיתי."
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "d00ac2621cff0e3e800096a0b728dd11ea102ae6",
+  "he": "א-אל תעשה את זה."
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "f418b2a1e1ac6bed21de382008baf2a9824e1002",
+  "he": "אה... כן?"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "6e311eff8f849a50aa0c781654a13cbe7f8820bb",
+  "he": "אני מרשה!!!!"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "266cb9d30b1806d583383adba29a325ebd9c0533",
+  "he": "...........#(אין להם כוח לעצור#אותך.)"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "fc6e7da3fd0d864ccd35dd2344571bae10bba02e",
+  "he": "זה קצת ישיר מדי,#לא...?"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "24d7b6a94e008bd8f77980aae9772547c0ef1258",
+  "he": "ברטי! ברטי!#זה השם שלי!"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "58b40ebcdc35c10704764dee9edf3c8c849ef3a9",
+  "he": "כאילו, סבבה כזה."
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "7ea2bf34afe026d9ed5382f650c63c2d5bf21aca",
+  "he": "אוווו!!! אתה#מקדם את המותג שלי?"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "44ebcdd7f7deb681a7bce19b4ce518efa4d6817c",
+  "he": "וואה הה הה! למה לא?"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "ca15757c6429818f2ffbf5148e8a439e371d682c",
+  "he": "השם הזה נכון? ; )"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "f6d54ebeee4a631614531bd28a7bb505743c7812",
+  "he": "הוי!"
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "0a2226d982a71b2eb7b3ce682383eb8f60289fd7",
+  "he": "שם נקי."
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "c06a8368b72cda8070726ba2f31b5a69373ec55c",
+  "he": "ג'רי."
+ },
+ {
+  "code": "gml_Script_scr_namingscreen_check",
+  "en_sha1": "0b9abbbcabcd631537efcd95756922c0974068aa",
+  "he": "אתה ממש מגרד את#תחתית הסיר."
+ },
+ {
+  "code": "gml_Object_obj_friendgraph_Draw_0",
+  "en_sha1": "2d28db47c44e9bf286539d7309ae2a446dbabf86",
+  "he": "כוח הדייט"
+ },
+ {
+  "code": "gml_Object_obj_friendgraph_Draw_0",
+  "en_sha1": "c2e91cf225634c8c9637c4f461a8865f9788a59c",
+  "he": "כוח החברות"
+ },
+ {
+  "code": "gml_Object_obj_screen_Other_4",
+  "en_sha1": "75ffc1a70d2d75e13f5b0fe55417d8d42a46291a",
+  "he": "UNDERTALE: המחזמר"
+ }
+]

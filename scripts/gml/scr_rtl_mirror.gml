@@ -1,0 +1,10 @@
+var c = argument0;
+if (c == "(") return ")";
+if (c == ")") return "(";
+if (c == "[") return "]";
+if (c == "]") return "[";
+if (c == "<") return ">";
+if (c == ">") return "<";
+if (c == "{") return "}";
+if (c == "}") return "{";
+return c;

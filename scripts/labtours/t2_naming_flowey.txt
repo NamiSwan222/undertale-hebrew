@@ -1,0 +1,45 @@
+wait 60
+until room_introimage z
+wait 60
+press z
+wait 60
+press z
+wait 30
+shot t2_00_naming
+press z
+wait 10
+press up
+wait 10
+shot t2_01_name_up
+press right
+wait 5
+press right
+wait 10
+shot t2_02_name_done
+press z
+wait 60
+shot t2_03_confirm
+press right
+wait 10
+press z
+wait 400
+shot t2_04_ruins
+hold up 120
+wait 30
+shot t2_05_walk
+hold up 120
+wait 60
+shot t2_06_flowey1
+press z
+wait 60
+shot t2_07_flowey2
+press z
+wait 60
+shot t2_08_flowey3
+press z
+wait 80
+shot t2_09_flowey4
+press z
+wait 80
+shot t2_10_flowey5
+quit

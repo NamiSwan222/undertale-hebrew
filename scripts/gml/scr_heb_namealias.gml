@@ -1,0 +1,28 @@
+// Hebrew spellings of the special names -> the English name the game checks for.
+var n = argument0;
+if (n == "אאאאאא") return "aaaaaa";
+if (n == "אסגור") return "asgore";
+if (n == "טוריאל") return "toriel";
+if (n == "סאנס") return "sans";
+if (n == "אנדיין") return "undyne";
+if (n == "פלאואי") return "flowey";
+if (n == "קארה") return "chara";
+if (n == "אלפיס") return "alphys";
+if (n == "פאפירו" || n == "פאפיר") return "papyru";
+if (n == "נאפסט" || n == "נאפסטב") return "napsta";
+if (n == "בלוקי") return "blooky";
+if (n == "רצח") return "murder";
+if (n == "רחמים") return "mercy";
+if (n == "אזריאל") return "asriel";
+if (n == "קטי") return "catty";
+if (n == "ברטי") return "bratty";
+if (n == "מטאטון" || n == "מטאטו") return "metta";
+if (n == "גרסון") return "gerson";
+if (n == "שיירן") return "shyren";
+if (n == "אהרון") return "aaron";
+if (n == "טמי") return "temmie";
+if (n == "וושואה") return "woshua";
+if (n == "גרי") return "jerry";
+if (n == "גסטר") return "gaster";
+if (n == "פריסק") return "frisk";
+return n;

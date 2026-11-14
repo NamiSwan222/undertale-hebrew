@@ -1,0 +1,13 @@
+wait 150
+shot t1_01_intro
+press z
+wait 120
+shot t1_02_title
+press z
+wait 60
+shot t1_03_instructions
+press z
+wait 60
+shot t1_04_naming
+wait 10
+quit
