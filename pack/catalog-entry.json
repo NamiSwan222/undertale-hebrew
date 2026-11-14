@@ -1,0 +1,15 @@
+{
+  "id": "undertale",
+  "name": "UNDERTALE",
+  "nameHe": "אנדרטייל",
+  "engine": "gamemaker",
+  "aboutHe": "תרגום מלא של כל הטקסט במשחק: דיאלוגים, תפריטים, קרבות, חנויות, סופים וקרדיטים. כולל כתיבה מימין לשמאל, פונט פיקסלים עברי ותמונות שצוירו מחדש. מתאים לגרסת Steam 1.08.",
+  "detect": {
+    "steamAppId": "391540",
+    "epicAppName": null,
+    "markerFile": "UNDERTALE.exe",
+    "processNames": ["UNDERTALE.exe"]
+  },
+  "pack": { "github": "NamiSwan222/undertale-hebrew", "tag": "undertale-*", "asset": "undertale-he-*.zip" },
+  "requires": []
+}

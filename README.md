@@ -56,7 +56,9 @@ Check the translation (after a setup run, which creates the English table): `pyt
 
 ### Launcher pack
 
-`scripts/make_launcher_pack.ps1 -Version X.Y.Z` builds the Tirgumim launcher pack `build\undertale-he-X.Y.Z.zip`. The pack contains no game file. It holds a binary patch (bsdiff) from the original v1.08 `data.win` to the Hebrew build, plus the font licence. The launcher checks the player's `data.win` hash, backs the file up and applies the patch. The script needs a launcher version whose `make-pack` supports `patches`.
+`scripts/make_launcher_pack.ps1 -Version X.Y.Z` builds the Tirgumim launcher pack `build\undertale-he-X.Y.Z.zip`. The pack contains no game file. It holds a binary patch (bsdiff) from the original v1.08 `data.win` to the Hebrew build, plus the font licence. The launcher (0.3.0 or later) checks the player's `data.win` hash, applies the patch, checks the result and keeps a backup of the original. The pack is for free launcher accounts only (`requiresAccount: false`).
+
+The script runs `setup.ps1 -NoInstall` (use `-SkipBuild` to reuse an existing build). It then makes the patch with `scripts/bsdiff`, a small Rust tool built on the same `qbsdiff` crate the launcher uses, and checks that the patch reproduces the Hebrew file. Last, it writes `tirgumim-pack.json` with the `patches` entry and zips the pack. It needs Rust (`cargo`) in addition to what `setup.ps1` needs. The draft catalog entry is in `pack/catalog-entry.json`.
 
 ## Credits
 

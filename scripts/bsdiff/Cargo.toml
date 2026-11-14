@@ -1,0 +1,12 @@
+[package]
+name = "ut-bsdiff"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Makes and checks the BSDIFF40 patch for the Undertale Hebrew launcher pack (same crate the launcher applies it with)."
+
+[dependencies]
+qbsdiff = "1.4.4"
+
+[profile.release]
+opt-level = 3
