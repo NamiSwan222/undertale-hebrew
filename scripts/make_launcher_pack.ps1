@@ -76,7 +76,7 @@ $manifest = [ordered]@{
     allowUnknownGameVersion = $false
     files                   = $files
     patches                 = @([ordered]@{ path = "data.win"; output = "data_he.win"; fromSha256 = $from; toSha256 = $to; size = (Get-Item $Hebrew).Length; patch = $PatchRel })
-    activation              = [ordered]@{ mode = "args"; exe = "UNDERTALE.exe"; args = @("-game", "{gameDir}/data_he.win"); workingDir = "{gameDir}"; via = "steam" }
+    activation              = [ordered]@{ mode = "args"; exe = "UNDERTALE.exe"; args = @("-game", "{gameDir}/data_he.win"); via = "steam" }
 }
 $utf8 = New-Object Text.UTF8Encoding $false
 [IO.File]::WriteAllText((Join-Path $Stage "tirgumim-pack.json"), ($manifest | ConvertTo-Json -Depth 8), $utf8)
