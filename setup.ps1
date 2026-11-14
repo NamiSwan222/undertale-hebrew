@@ -47,7 +47,7 @@ $py = (Get-Command python -ErrorAction SilentlyContinue)
 if (-not $py) { throw "Python 3 is not on PATH. Install it from python.org (tick 'Add python.exe to PATH') and run again." }
 & python -c "import PIL" 2>$null
 if ($LASTEXITCODE -ne 0) { Write-Output "Installing Pillow..."; & python -m pip install --user pillow; if ($LASTEXITCODE -ne 0) { throw "pip install pillow failed" } }
-$env:PYTHONIOENCODING = "utf-8"
+$env:PYTHONIOENCODING = "utf-8"; $env:PYTHONWARNINGS = "ignore"
 
 # --- UndertaleModTool CLI ---
 $Tools = Join-Path $W "tools"; $Utmt = Join-Path $Tools "utmt"; $Cli = Join-Path $Utmt "UndertaleModCli.exe"
