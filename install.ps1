@@ -31,11 +31,11 @@ if ($Status) { exit 0 }
 
 if ($Play) {
     if (-not $hebIn) { throw "Hebrew isn't installed yet. Run install.ps1 first." }
-    # Through Steam (it passes the arguments on); started directly, the Steam build restarts itself through Steam.
+    # Through Steam (it passes the arguments on, but drops quotes, so use the bare file name; Steam starts the game in its folder); started directly, the Steam build restarts itself through Steam.
     $steam = $null
     try { $steam = (Get-ItemProperty "HKCU:\Software\Valve\Steam" -ErrorAction Stop).SteamExe } catch {}
     if ($steam -and (Test-Path $steam)) {
-        Start-Process -FilePath $steam -ArgumentList "-applaunch 391540 -game `"$Target`""
+        Start-Process -FilePath $steam -ArgumentList "-applaunch 391540 -game $HebName"
     } else {
         Start-Process -FilePath (Join-Path $GameDir "UNDERTALE.exe") -ArgumentList "-game `"$Target`"" -WorkingDirectory $GameDir
     }
