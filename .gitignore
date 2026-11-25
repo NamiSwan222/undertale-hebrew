@@ -24,6 +24,7 @@
 !/translation/TRANSLATOR_BRIEF.md
 !/translation/SPRITE_BRIEF.md
 !/translation/he_code_literals_hashed.json
+!/translation/coverage-allowlist.json
 
 /screenshots/*
 !/screenshots/final/

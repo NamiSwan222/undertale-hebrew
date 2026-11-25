@@ -1,0 +1,45 @@
+{
+  "_about": "English that the coverage check accepts in the Hebrew build. Every entry was reviewed by hand on 2026-11-25 against the v1.08 data. Anything not listed here, and not in an object that no room places, counts as untranslated.",
+  "textTable": {
+    "keyPatterns": [
+      { "pattern": "^credits_short_(\\d+|loc\\d_\\w+|test_\\d+|thanks_\\w+)$", "reason": "real people's and companies' names in the credits, kept in Latin" },
+      { "pattern": "^castroll_", "reason": "real person's name in the cast roll" }
+    ],
+    "keys": {
+      "stat_menu_lv": "LV / HP / AT / DF / EXP stay Latin (glossary: stat abbreviations are not translated)",
+      "stat_menu_hp": "stat abbreviation, see stat_menu_lv",
+      "stat_menu_at": "stat abbreviation, see stat_menu_lv",
+      "stat_menu_df": "stat abbreviation, see stat_menu_lv",
+      "stat_menu_exp": "stat abbreviation, see stat_menu_lv",
+      "save_menu_lv": "stat abbreviation, see stat_menu_lv",
+      "flowey_load_lv": "stat abbreviation, see stat_menu_lv",
+      "obj_memoryhead_484": "Memoryhead CHECK line made only of AT / DF values",
+      "obj_lastsans_trigger_437": "\"LV3\": stat abbreviation (Hebrew build upper-cases it)",
+      "monstername_34": "Royal Guard designation \"RG 01\", kept as a code name",
+      "monstername_35": "\"RG 02\", see monstername_34",
+      "monstername_48": "\"RG 03\", see monstername_34",
+      "monstername_49": "\"RG 04\", see monstername_34",
+      "obj_ripoff_toriel_250": "\"Default\": fallback branch of the Lost Soul bubble text, never reached in play",
+      "obj_ripoff_papyrus_243": "\"Default\", see obj_ripoff_toriel_250",
+      "obj_ripoff_alphys_256": "\"Default\", see obj_ripoff_toriel_250",
+      "obj_ripoff_undyne_287": "\"Default\", see obj_ripoff_toriel_250"
+    }
+  },
+  "codeLiterals": {
+    "entries": {
+      "gml_Script_scr_loadcredits": "Kickstarter backer names in the credits (real people)",
+      "gml_Object_obj_intromenu_Draw_0": "\"UNDERTALE v1.08 (C) Toby Fox 2015-2017\" copyright/version line",
+      "gml_Script_ossafe_savedata_load": "console-only save dialog strings (PS4/Vita); the PC build writes files directly",
+      "gml_Script_ossafe_savedata_save": "console-only save dialog strings, see ossafe_savedata_load",
+      "gml_Script_attention_hackerz_no_2": "anti-tamper message shown only when the save/ini is hacked; part of the game's joke, low priority",
+      "gml_Script_SCR_TEXT": "debug/test cases at the top of SCR_TEXT (\"TestMonster\", \"fhuehfueh...\", an unused Flowey line); believed unreachable, not verified in play",
+      "gml_Object_obj_questionasker_Create_0": "placeholder quiz answers, apparently overwritten from the text table (mettquiz_*) before drawing",
+      "gml_Object_obj_questionasker_Other_10": "placeholder question, apparently overwritten from the text table (mettquiz_*) before drawing",
+      "gml_Object_obj_questionasker_Draw_0": "developer joke string (\"LOOLLLL IF YOU CAME TO THIS PART OF THE CODE...\") among the quiz draw code; believed never drawn, not verified in play",
+      "gml_Object_obj_vsflowey_heart_Create_0": "\"Big boner down the lane\" debug text in the Photoshop Flowey heart; believed unused, not verified in play",
+      "gml_Object_obj_redacted_a_Alarm_0": "only placed in room_water_redacted, a cut room",
+      "gml_Object_obj_fearundynenpc1_Alarm_0": "only placed in room_meetundyne_old, a cut room",
+      "gml_Object_obj_fearundynenpc2_Alarm_0": "only placed in room_meetundyne_old, a cut room"
+    }
+  }
+}

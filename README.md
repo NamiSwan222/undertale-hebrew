@@ -60,6 +60,8 @@ Starting UNDERTALE from Steam stays English. Start Hebrew with `install.ps1 -Pla
 
 Check the translation (after a setup run, which creates the English table): `python scripts/check_batch.py --all`
 
+Check the built game for leftover English: `node scripts/coverage.js` (Node 18+, after `setup.ps1 -NoInstall`; or pass the original and Hebrew data files). It compares the original `data.win` with the Hebrew build directly, with no decompiler. It covers the text table and the English sentences hard-coded in game code. It exits 0 only when nothing is left except the reviewed exceptions in `translation/coverage-allowlist.json` (credits names, LV/HP, debug text, cut rooms; each has a reason). `--unused` lists text in objects that no room places (cut content). Release 0.2.0 checks 100%: 15,195 of 15,272 text-table entries are in Hebrew, and the other 77 stay Latin on purpose. Text inside images is covered by the sprite audit, not by this script.
+
 ### Launcher pack
 
 `scripts/make_launcher_pack.ps1 -Version X.Y.Z` builds the Tirgumim launcher pack `build\undertale-he-X.Y.Z.zip`. The pack contains no game file. It holds a binary patch (bsdiff) from the original v1.08 `data.win` to the Hebrew build, plus the font licence. The launcher (0.4.0 or later) checks the player's `data.win` hash and writes the Hebrew game to a new file, `data_he.win`; `data.win` itself is never changed. Hebrew runs only when the launcher starts the game (through Steam, with `-game data_he.win`). Started from Steam, UNDERTALE stays English. The pack is for free launcher accounts only (`requiresAccount: false`).
